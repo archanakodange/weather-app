@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -20,7 +21,7 @@ hbs.registerPartials(partialDirectoryPath);
 app.use(express.static(publicDirectoryPath));
 
 app.get('', (req, res) => {
-    res.render('index', { title: 'Weather App', name: 'Archana' });
+    res.render('index', { title: 'Weather', name: 'Archana' });
 });
 
 app.get('/about', (req, res) => {
@@ -56,6 +57,6 @@ app.get('*', (req, res) => {
     res.render('404',{ title: 'About', name: 'Archana', errorMessage: 'Page not found' });
 });
 
-app.listen(3000, () => {
-    console.log('Server listening on port 3000');
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
 });
