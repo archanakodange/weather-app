@@ -25,7 +25,7 @@ app.get('', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', { title: 'About', name: 'Archana', body: 'This application shows weather forecasts.' });
+    res.render('about', { title: 'About', name: 'Archana' });
 });
 
 app.get('/weather', (req, res) => {

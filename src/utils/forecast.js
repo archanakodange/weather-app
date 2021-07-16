@@ -26,8 +26,8 @@ const forecast = (latitude, longitude, callback) => {
             }
             callback(undefined, 'Weather on ' + day + ', ' + hr + ':' + min + ' ' + ampm + '\n' +
                 weather[0] + ' Temperature: ' + temperature + 
-                ' C, Percipitation: ' + precip + ' %, Humidity: ' + humidity +
-                ' %, Wind: ' + wind_speed + ' km/h');
+                ' C, Precip: ' + precip + ' mm, Humidity: ' + humidity +
+                ' %, Wind: ' + wind_speed + ' kmh');
         }
     });
 };
